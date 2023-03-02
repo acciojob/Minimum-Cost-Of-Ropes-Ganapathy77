@@ -16,5 +16,7 @@ while(arr.length>1){
 		return a-b;
 	});
 }
-document.getElementById("result").textContent=cost;	
+let result1 = document.getElementById("result");	
+	result1.textContent=cost
+	result.classList.add("div");
 }
