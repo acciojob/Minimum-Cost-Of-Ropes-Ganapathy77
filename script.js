@@ -1,21 +1,21 @@
-function calculateMinCost() {
-  //your code here
-	let result = document.querySelector("#result");
-  let ropeLenghts = document.querySelector("#rope-lengths").value;
-	let ropeLengthArray = ropeLenghts.split(",");
-	ropeLengthArray.sort(function (a,b) { return a-b;})
-	let cost = 0;
+function calculateMinCost(){
+	let ropelengthsStr=document.getElementById('rope-lengths').value;
+	let ropelengthsArr=ropelengthsStr.split(",").map(Number);
+	let n=ropelengthsArr.length;
 
-	while(ropeLengthArray.length>1){
-		let sum= (Number(ropeLengthArray[0]) + Number(ropeLengthArray[1]));
-		cost+=sum;
-		ropeLengthArray.push(sum);
-		ropeLengthArray.shift();
-		ropeLengthArray.shift();
-
-		ropeLengthArray.sort(function (a,b) { return a-b; })
-		
+let pq=[];
+	for(let i=0;i<n;i++){
+		pq.push(ropelengthsArr[i]);
 	}
-	result.innerHTML = cost;
-	result.classList.add("div");
-}  
+pq.sort((a,b)=>a-b);
+
+let res=0;
+while(pq.length>1){
+	let first=pq.shift();
+	let second= pq.shift();
+	res+=first+second;
+	pq.push(first+second);
+	pq.sort((a,b)=>a-b);
+}
+	document.getElementById('result').textContent=res;
+}
