@@ -1,8 +1,7 @@
-function minimumCost(event) {
+function calculateMinCost() {
   //your code here
-	event.preventDefault();
 	let result = document.querySelector("#result");
-  let ropeLenghts = document.querySelector("#inputArr").value;
+  let ropeLenghts = document.querySelector("#rope-lengths").value;
 	let ropeLengthArray = ropeLenghts.split(",");
 	ropeLengthArray.sort(function (a,b) { return a-b;})
 	let cost = 0;
