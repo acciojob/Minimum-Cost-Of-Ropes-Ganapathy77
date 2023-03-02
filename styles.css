@@ -1,4 +1,5 @@
 /* Your CSS code here. */
+/*
 *{
 	margin:0;
 	padding:0;
@@ -23,7 +24,12 @@ form{
 	justify-content:center;
 	border-radius: 45px;
 	background-color: #67d6d5;
+	box-shadow: 5px 10px 20px #888888;
 }
+form:hover{
+	transform:scale(1.01)
+}
+
 label{
 	font-size:1.5rem;
 	text-transform:uppercase;
@@ -35,6 +41,7 @@ input{
 	border:none;
 	padding:10px;
 	font-size:20px;
+	box-shadow: 2px 1px 20px #888888;
 }
 
 button{
@@ -46,10 +53,12 @@ button{
 	font-weight:bold;
 	text-transform:uppercase;
 	color:#444;
+	box-shadow: -5px 5px 20px #888888;
 }
 
 button:hover{
 	filter: brightness(107%);
+	box-shadow: 5px 10px 20px #888888;
 }
 
 button:active{
@@ -64,8 +73,10 @@ button:active{
 	font-size:1.5rem;
 	background-color: #67d6d5;
 	color:#444;
+	box-shadow: 5px 5px 25px #888888;
 }
 
 
 
 
+ */
