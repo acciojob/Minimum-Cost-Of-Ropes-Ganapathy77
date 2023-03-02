@@ -18,5 +18,5 @@ while(arr.length>1){
 }
 let result1 = document.getElementById("result");	
 	result1.textContent=cost
-	result.classList.add("div");
+	result1.classList.add("div");
 }
